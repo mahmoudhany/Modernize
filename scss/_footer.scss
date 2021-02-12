@@ -1,0 +1,181 @@
+.footer {
+  background: #1f1d1d;
+  color: #5c5c5c;
+
+  &__wrapper {
+    @include section-padding;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 0.8fr));
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: center;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      gap: 30px;
+      width: 100%;
+
+      &__title {
+        color: $white;
+        font-weight: 400;
+        font-size: 0.9375rem;
+        text-transform: capitalize;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 15%;
+          height: 2px;
+          position: absolute;
+          background: #fff;
+          margin-top: 20px;
+        }
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+        height: 100%;
+
+        // on mobile
+        gap: 30px;
+      }
+    }
+
+    .col1 {
+      .col__content {
+        font-weight: 300;
+        font-size: 14px;
+
+        .social-links {
+          display: flex;
+          gap: 10px;
+
+          .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #111111;
+            width: 35px;
+            height: 35px;
+            background: $link-bg;
+            @include transition-ease;
+            border-radius: 2px;
+            &:hover {
+              @include transition-ease;
+              background: $main-green;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .col2 {
+      .col__content {
+        .item {
+          &__info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #5c5c5c;
+            font-weight: 300;
+            font-size: 0.875rem;
+            i {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 30px;
+              height: 30px;
+              font-size: 0.75rem;
+              color: $main-green;
+              background: $link-bg;
+            }
+          }
+        }
+      }
+    }
+    .col3 {
+      .col__content {
+        justify-content: flex-start;
+        .col__post {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          &--image {
+            height: 70px;
+            max-width: 70px;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
+          }
+          &--description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .description-title {
+            font-weight: 300;
+            color: $light-gray;
+            font-size: 0.8125rem;
+            display: block;
+            line-height: 1.5;
+          }
+          .description-date {
+            font-size: 0.75rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .col4 {
+      .col__content {
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          gap: 5px;
+
+          input,
+          textarea {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            font-size: 0.75rem;
+            outline: none;
+            border: none;
+            padding: 0.625rem 0.9375rem;
+            background: #282626;
+            color: $white;
+          }
+          textarea {
+            max-height: 75px;
+            resize: none;
+            overflow: auto;
+          }
+
+          .btn-submit {
+            background: $main-green;
+            color: $white;
+            padding: 10px;
+            text-align: center;
+            &:hover {
+              background-color: lighten($color: $main-green, $amount: 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  background: #111111;
+  color: #2c2c2c;
+  padding: 30px 0;
+}

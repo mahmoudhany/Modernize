@@ -1,0 +1,57 @@
+.clients {
+  @include section-padding;
+  background: linear-gradient(
+      to right,
+      rgba($main-green, 0.7),
+      rgba($main-green, 0.4)
+    ),
+    url("/images/DeathtoStock.png") center;
+  min-height: 500px;
+  background-size: cover;
+  padding-right: 50px;
+  padding-left: 50px;
+  &__wrapper {
+    .client {
+      text-align: center;
+      padding-right: 50px;
+      padding-left: 50px;
+      color: $white;
+      &__image {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 3.125rem;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      &__testimonial {
+        max-width: 770px;
+        margin: 0 auto;
+        p {
+          font-size: 1.125rem;
+          font-weight: 300;
+          font-style: italic;
+          margin-bottom: 3.125rem;
+        }
+      }
+      &__info {
+        font-size: 1rem;
+        &--name {
+          display: inline-block;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        &--job-title {
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
