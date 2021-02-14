@@ -12,9 +12,13 @@
     .service {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       flex-direction: column;
       text-align: center;
-      gap: 20px;
+
+      & *:not(:first-child) {
+        margin-top: 1.25em;
+      }
 
       &__icon {
         display: flex;
@@ -23,7 +27,6 @@
         color: $gray;
         background: $white;
         border: 1px solid $gray;
-        padding: 1.375rem;
         font-size: 1.5rem;
         width: 70px;
         height: 70px;

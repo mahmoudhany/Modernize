@@ -311,12 +311,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  gap: 20px;
+}
+
+.services__wrapper .service *:not(:first-child) {
+  margin-top: 1.25em;
 }
 
 .services__wrapper .service__icon {
@@ -332,7 +338,6 @@
   color: #dadada;
   background: #fff;
   border: 1px solid #dadada;
-  padding: 1.375rem;
   font-size: 1.5rem;
   width: 70px;
   height: 70px;
@@ -390,7 +395,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3rem;
 }
 
 .portfolio__wrapper--content .tabs {
@@ -430,6 +434,7 @@
 }
 
 .portfolio__wrapper--content .portfolio__works {
+  margin-top: 3rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 0.8fr))[auto-fit];
@@ -689,7 +694,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  gap: 10px;
   padding: 20px 0;
   text-transform: capitalize;
 }
@@ -702,6 +706,7 @@
 .team__wrapper--content .member__info--job-title {
   color: #c04848;
   font-size: 0.875rem;
+  margin-top: 0.625rem;
 }
 
 .clients {
@@ -937,7 +942,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 20px;
   font-size: 0.75rem;
   color: #959595;
   text-transform: capitalize;
@@ -945,6 +949,10 @@
 
 .blog__wrapper--content .post__info--details i {
   color: #1d976c;
+}
+
+.blog__wrapper--content .post__info--details .comments {
+  margin-left: 1.25rem;
 }
 
 .footer {
@@ -975,7 +983,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  gap: 30px;
   width: 100%;
 }
 
@@ -1008,9 +1015,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 50px;
   height: 100%;
-  gap: 30px;
 }
 
 .footer__wrapper .col1 .col__content {
@@ -1022,7 +1028,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  margin-top: 0.625rem;
 }
 
 .footer__wrapper .col1 .col__content .social-links .link {
@@ -1036,6 +1042,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #111111;
+  margin-right: 10px;
   width: 35px;
   height: 35px;
   background: #302f2f;
@@ -1051,6 +1058,10 @@
   color: #fff;
 }
 
+.footer__wrapper .col2 .col__content .item:not(:first-of-type) {
+  margin-top: 0.625rem;
+}
+
 .footer__wrapper .col2 .col__content .item__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1058,7 +1069,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   color: #5c5c5c;
   font-weight: 300;
   font-size: 0.875rem;
@@ -1081,6 +1091,11 @@
   background: #302f2f;
 }
 
+.footer__wrapper .col2 .col__content .item__info span {
+  display: inline-block;
+  margin-left: 8px;
+}
+
 .footer__wrapper .col3 .col__content {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -1095,7 +1110,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 20px;
+}
+
+.footer__wrapper .col3 .col__content .col__post:not(:first-of-type) {
+  margin-top: 1.25rem;
 }
 
 .footer__wrapper .col3 .col__content .col__post--image {
@@ -1123,6 +1141,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 8px;
 }
 
 .footer__wrapper .col3 .col__content .col__post .description-title {
@@ -1149,7 +1168,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  gap: 5px;
+}
+
+.footer__wrapper .col4 .col__content .contact-form :not(:first-child) {
+  margin-top: 5px;
 }
 
 .footer__wrapper .col4 .col__content .contact-form input,
@@ -1196,6 +1218,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 0;
 }
 
 html {

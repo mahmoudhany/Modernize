@@ -104,12 +104,15 @@
           &--details {
             display: flex;
             flex-direction: row;
-            gap: 20px;
             font-size: 0.75rem;
             color: $light-gray;
             text-transform: capitalize;
             i {
               color: $main-green;
+            }
+
+            .comments {
+              margin-left: 1.25rem;
             }
           }
         }
