@@ -15,7 +15,6 @@ $(document).ready(function () {
 
 const dates = document.getElementsByClassName('date')
 for (let i = 0; i < dates.length; i++) {
-  console.log(dates[i]);
   dates[i].innerHTML = `${moment().format("MMMM DD, YY")}`
 }
 
